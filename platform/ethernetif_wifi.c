@@ -234,11 +234,13 @@ void lwip_interface_ethernetif_input(void *net_if,  RX_PACKET_INFO_T *rx_packet)
         /* IP or ARP packet? */
         case ETHTYPE_IP:
         case ETHTYPE_ARP:
+#if 0
         #if PPPOE_SUPPORT
         /* PPPoE packet? */
         case ETHTYPE_PPPOEDISC:
         case ETHTYPE_PPPOE:
         #endif /* PPPOE_SUPPORT */
+#endif
 #ifdef LWIP_DUALSTACK
         case ETHTYPE_IPV6:
 #endif
